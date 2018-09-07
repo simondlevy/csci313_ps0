@@ -1,0 +1,97 @@
+\documentclass [12pt,psfig]{article}
+\usepackage{epsfig}
+
+\baselineskip=15pt minus 1pt
+\parskip=3pt plus1pt minus.5pt
+\overfullrule=0pt
+
+% maximize page usage
+\oddsidemargin -20pt
+\evensidemargin -20pt
+\marginparwidth 30pt % these gain 53pt width
+%\topmargin -20pt       % gains 26pt height
+\headheight -10pt      % gains 11pt height
+\headsep 1pt         % gains 24pt height
+%\footheight 12 pt % cannot be changed as number must fit
+\footskip 24pt       % gains 6pt lawall.texheight
+\textheight % 528 + 26 + 11 + 24 + 6 + 55 for luck
+            680pt
+\textwidth % 360 + 53 + 47 for luck
+           500pt
+% end of page layout changes
+
+\begin{document}
+
+% Alter some LaTeX defaults for better treatment of figures:
+% See p.105 of "TeX Unbound" for suggested values.
+% See pp. 199-200 of Lamport's "LaTeX" book for details.
+%   General parameters, for ALL pages:
+\renewcommand{\topfraction}{0.9}	% max fraction of floats at top
+\renewcommand{\bottomfraction}{0.8}	% max fraction of floats at bottom
+%   Parameters for TEXT pages (not float pages):
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}     % 2 may work better
+\setcounter{dbltopnumber}{2}    % for 2-column pages
+\renewcommand{\dbltopfraction}{0.9}	% fit big float above 2-col. text
+\renewcommand{\textfraction}{0.07}	% allow minimal text w. figs
+%   Parameters for FLOAT pages (not text pages):
+\renewcommand{\floatpagefraction}{0.7}	% require fuller float pages
+    % N.B.: floatpagefraction MUST be less than topfraction !!
+\renewcommand{\dblfloatpagefraction}{0.7}	% require fuller float pages
+
+% remember to use [htp] or [htpb] for placement
+
+%\pagestyle{empty}
+
+\begin{flushleft}
+\begin{minipage}{1.25in}
+\hspace{-0.5in}
+\resizebox{\textwidth}{!}{\includegraphics{seal.jpg}}
+\end{minipage}
+\end{flushleft}
+
+\vspace{-1.25in}
+
+\begin{flushright}
+\begin{minipage}{430pt}
+{
+\begin{flushleft}
+{\Large C}{\large OMPUTER} 
+{\Large S}{\large CIENCE}
+{\Large 313} {\large (Winter Term 2008)\\
+\textbf{Theory of Computation}}\\
+Prof. Levy\hfill\\
+\end{flushleft}
+}
+\end{minipage}
+\end{flushright}
+
+\def\date{\begin{flushright}
+\today
+\end{flushright}}
+
+\vspace{0.25in}
+%\input preamble
+
+\def\set#1{\lbrace #1 \rbrace}
+
+\topmargin 20pt
+\indent \indent Date: \underline{Wednesday 14 January 2008}
+\indent\indent\indent\indent\indent
+Name: \underline{Leeroy Jenkins}
+\begin{center}
+\rm\LARGE
+\bf Assignment\# 0\\
+\normalsize
+\end{center}
+\noindent
+\\
+\textbf{1.} Draw a DFA that accepts the language of strings having at least one 
+$a$.
+\begin{figure}[htp]
+\centering
+\includegraphics[width=1.0\textwidth]{question1.pdf}
+\end{figure}
+
+\end{document}
